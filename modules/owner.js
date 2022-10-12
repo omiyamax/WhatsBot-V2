@@ -30,15 +30,14 @@ ezio.addCommand(
       ];
       const text = `------- Owner Detals -------
 
-⚜ Name: Dark Ezio.
-⚜ Number: Wa.me/94761539856
+⚜ Name: Omindu Anjane (Black Alpha).
+⚜ Number: Wa.me/94760510568
 ⚜ Company: Subadra Bro
-⚜ Web Site: https://aidarkezio.github.io/
+⚜ Web Site: https://ominduanjane.github.io/
 ⚜ Youtube: https://www.youtube.com/channel/UCeDeaDD8dpdMT2gO3VHY1JQ
-⚜ GitHub: https://www.github.com/aidarkezio
+⚜ GitHub: https://www.github.com/ominduanjane
 ⚜ FaceBook: https://fb.com/poshitha.subadra (Poshitha Subadra)
 ⚜ Instagram: https://instagram.com/subadraposhitha (Poshitha Subadra)
-⚜ Twitter: https://twitter.com/brosubadra (BroSubadra)
 
 ----------------------------
 
@@ -53,9 +52,9 @@ ezio.addCommand(
       footer: ezio.config.exif.footer,
       buttons,
       linkPreview: {
-        "canonical-url": "https://aidarkezio.github.io/",
-        "matched-text": "https://aidarkezio.github.io/",
-        title: "Dark Ezio",
+        "canonical-url": "https://ominduanjane.github.io/",
+        "matched-text": "https://ominduanjane.github.io/",
+        title: "Omindu Anjana",
         description: "This is a WhatsApp user bot. \n\nAlive",
         jpegThumbnail: ezio.config.image.encd.D_E_ADEC,
       },
