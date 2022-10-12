@@ -19,7 +19,7 @@ ezio.addCommand(
     pattern: ["play", "ytplay"], 
     desc: "you can dowloade audio from youtube", 
     usage: '<url|query>',
-    sucReact: "🔎", 
+    sucReact: "🔍", 
     category: ["search", "all"] 
 },
   async (message, client) => {
@@ -33,15 +33,15 @@ ezio.addCommand(
         video = await yts({ videoId: message.client.args[1] });
         result = video;
         buttons = [
-          { buttonId: `.ytmp3 ${result.url}`, buttonText: { displayText: "🎼 Audio 🎵" }, type: 1, },
-          { buttonId: `.ytmp4 ${result.url}`, buttonText: { displayText: "🎞 Video 📽️" }, type: 1, },
+          { buttonId: `.ytmp3 ${result.url}`, buttonText: { displayText: "🎶 Audio 🎶" }, type: 1, },
+          { buttonId: `.ytmp4 ${result.url}`, buttonText: { displayText: "🎬 Video 🎬" }, type: 1, },
         ];
       } else {
         results = await yts(message.client.text);
         result = results.videos[0];
         buttons = [
-          { buttonId: `.ytmp3 ${result.url}`, buttonText: { displayText: "🎼 Audio 🎵" }, type: 1, },
-          { buttonId: `.ytmp4 ${result.url}`, buttonText: { displayText: "🎞 Video 📽️" }, type: 1, },
+          { buttonId: `.ytmp3 ${result.url}`, buttonText: { displayText: "🎶 Audio 🎶" }, type: 1, },
+          { buttonId: `.ytmp4 ${result.url}`, buttonText: { displayText: "🎬 Video 🎬" }, type: 1, },
           { buttonId: `.rytplay ${message.client.text}`, buttonText: { displayText: "🔎 Random Search 🔍" }, type: 1, },
         ];
       }
@@ -49,16 +49,16 @@ ezio.addCommand(
         image: { url: result.thumbnail },
         caption: `
   —————————————————————————
-  ♻ Title : ${result.title}
-  ♻ Ext : Search [first result]
-  ♻ ID : ${result.videoId}
-  ♻ Duration : ${result.timestamp}
-  ♻ Viewes : ${result.views}
-  ♻ Uploaded On : ${result.ago}
-  ♻ Author : ${result.author.name}
-  ♻ Channel : ${result.author.url}
-  ♻ Description : ${result.description}
-  ♻ Url : ${result.url}
+  🏷️ Title : ${result.title}
+  📧 Ext : Search [first result]
+  ✍️ ID : ${result.videoId}
+  🎫 Duration : ${result.timestamp}
+  🔸 Viewes : ${result.views}
+  📤 Uploaded On : ${result.ago}
+  🧑‍💻 Author : ${result.author.name}
+  📱 Channel : ${result.author.url}
+  🧾 Description : ${result.description}
+  🛡️ Url : ${result.url}
   —————————————————————————`,
         footer: ezio.config.exif.footer,
         buttons: buttons,
@@ -74,7 +74,7 @@ ezio.addCommand(
     pattern: ["rplay", "rytplay"], 
     desc: "you can dowloade Randomly yt result downlode", 
     usage: '<url|query>',
-    sucReact: "🔎", 
+    sucReact: "🔍", 
     category: ["search", "all"] 
 },
   async (message, client) => {
@@ -91,16 +91,16 @@ ezio.addCommand(
         image: { url: result.thumbnail },
         caption: `
   —————————————————————————
-  ♻ Title : ${result.title}
-  ♻ Ext : Search [Random result]
-  ♻ ID : ${result.videoId}
-  ♻ Duration : ${result.timestamp}
-  ♻ Viewes : ${result.views}
-  ♻ Uploaded On : ${result.ago}
-  ♻ Author : ${result.author.name}
-  ♻ Channel : ${result.author.url}
-  ♻ Description : ${result.description}
-  ♻ Url : ${result.url}
+  🏷️ Title : ${result.title}
+  📧 Ext : Search [Random result]
+  ✍️ ID : ${result.videoId}
+  🎫 Duration : ${result.timestamp}
+  🔸 Viewes : ${result.views}
+  📤 Uploaded On : ${result.ago}
+  🧑‍💻 Author : ${result.author.name}
+  📱 Channel : ${result.author.url}
+  🧾 Description : ${result.description}
+  🛡️ Url : ${result.url}
   —————————————————————————`,
         footer: ezio.config.exif.footer,
         buttons: buttons,
@@ -134,9 +134,9 @@ ezio.addCommand(
       });
       const sections = [ { title: "Videos", rows: rows, }, ];
       const listMessage = {
-        text: "Youtube Search Results",
+        text: "🔍Youtube Search Results",
         footer: ezio.config.exif.footer,
-        title: "Whats Bot MD V5",
+        title: "Queen Lora Md",
         buttonText: "📃 Results Here 📃",
         sections,
       };
