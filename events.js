@@ -21,9 +21,9 @@ const reactArry = async (text = "INFO" || "SUCCESS" || "ERROR") => {
   const react = reactArry[text];
   return (react[Math.floor(Math.random() * react.length)])
 };
-const successfullMessage = (msg) => { return "👩‍🦰 *Successful*:-  ```" + msg + "```"; };
-const errorMessage = (msg) => { return "🚀 *Error*:-  ```" + msg + "```"; };
-const infoMessage = (msg) => { return "🤖 *Info*:- ```" + msg + "```"; };
+const successfullMessage = (msg) => { return "✅ *Successful*:-  ```" + msg + "```"; };
+const errorMessage = (msg) => { return "✖️ *Error*:-  ```" + msg + "```"; };
+const infoMessage = (msg) => { return "👨‍💻 *Info*:- ```" + msg + "```"; };
 const categories = ["search", "all", "downloade", "chat", "system", 'fun', '18+', 'owner', 'create', 'group', "logo" ];
 function addCommand(info, func) {
   var types = ["photo", "image", "text", "message"];
@@ -32,7 +32,7 @@ function addCommand(info, func) {
     fromMe: info["fromMe"] === undefined ? true : info["fromMe"],
     onlyGroup: info["onlyGroup"] === undefined ? false : info["onlyGroup"],
     onlyPinned: info["onlyPinned"] === undefined ? false : info["onlyPinned"],
-    sucReact: info["sucReact"] === undefined ? "💖" : info["sucReact"],
+    sucReact: info["sucReact"] === undefined ? "✅" : info["sucReact"],
     onlyPm: info["onlyPm"] === undefined ? false : info["onlyPm"],
     deleteCommand: info["deleteCommand"] === undefined ? true : info["deleteCommand"],
     desc: info["desc"] === undefined ? "" : info["desc"],
