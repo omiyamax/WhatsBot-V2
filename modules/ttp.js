@@ -14,7 +14,7 @@ const ezio = require("../events");
 const lang = ezio.getString("ttp");
 const axios = require("axios");
 
-ezio.addCommand( { pattern: ["ttp"], sucReact: "🖼", category: ["all", "create"], },
+ezio.addCommand( { pattern: ["ttp"], sucReact: "📃", category: ["all", "create"], },
   async (message, client) => {
     if (!message.client.text) { global.catchError = true; return await client.sendErrorMessage( message.from, lang.NEED_WORD, message.key, message ); }
     var uri = encodeURI(message.client.text);
@@ -29,7 +29,7 @@ ezio.addCommand( { pattern: ["ttp"], sucReact: "🖼", category: ["all", "create
   }
 );
 
-ezio.addCommand( { pattern: ["attp"], desc: lang.ATTP_DESC, sucReact: "☯", category: ["all", "create"], },
+ezio.addCommand( { pattern: ["attp"], desc: lang.ATTP_DESC, sucReact: "🧾", category: ["all", "create"], },
   async (message, client) => {
     if (!message.client.text) {global.catchError = true; return await client.sendErrorMessage(message.from,lang.NEED_WORD,message.key,message);}
     var uri = encodeURI(message.client.text);
