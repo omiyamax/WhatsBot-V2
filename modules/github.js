@@ -10,11 +10,11 @@
 => Whats Bot - Dark_Ezio.
 // ════════════════════════════ */
 
-const ezio = require("../events");
-const lang = ezio.getString("github");
+const lora = require("../events");
+const lang = lora.getString("github");
 const axios = require("axios");
 
-ezio.addCommand(
+lora.addCommand(
   {
     pattern: ["github"],
     desc: lang.GITHUB_DESC,
@@ -27,10 +27,10 @@ ezio.addCommand(
 
     if (!uName) {
       global.catchError = true;
-      return await client.sendMessage( message.from, { text: ezio.errorMessage(lang.REPLY) }, { quoted: message } );
+      return await client.sendMessage( message.from, { text: lora.errorMessage(lang.REPLY) }, { quoted: message } );
     }
 
-    await axios.get(`${ezio.config.api.github.domain}/users/${uName}`)
+    await axios.get(`${lora.config.api.github.domain}/users/${uName}`)
       .then(async (response) => {
         const { login, avatar_url, html_url, twitter_username, bio, name, company, public_repos, public_gists, followers, location, following, created_at, blog, type, email, updated_at, } = response.data;
 
@@ -70,7 +70,7 @@ ezio.addCommand(
           `\n\n` +
           `⚜ *${lang.UPDATE}* ${updated_at}\n`;
 
-        await client.sendMessage( message.from, { image: { url: avatar_url }, caption: msg + "\n" + ezio.config.exif.footer,}, { quoted: message, });
+        await client.sendMessage( message.from, { image: { url: avatar_url }, caption: msg + "\n" + lora.config.exif.footer,}, { quoted: message, });
         global.catchError = false;
       })
       .catch(async (err) => {
