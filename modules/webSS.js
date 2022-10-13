@@ -11,21 +11,21 @@
 // ════════════════════════════ */
 
 const got = require("got");
-const ezio = require("../events");
+const lora = require("../events");
 const lang = ezio.getString("webss");
 
-ezio.addCommand(
+lora.addCommand(
   {
     pattern: ["ss"],
     desc: lang.SS_DESC,
     usage: '<url>',
-    sucReact: "🌍",
+    sucReact: "📱",
     category: ["all", "create"],
   },
   async (message, client) => {
     if (!message.client.args[0]) {
       global.catchError = true;
-      return await client.sendMessage(message.from,{ text: ezio.errorMessage(lang.LINK) },{ quoted: message });
+      return await client.sendMessage(message.from,{ text: lora.errorMessage(lang.LINK) },{ quoted: message });
     }
     try {
       const torken = process.env.SS || '';
