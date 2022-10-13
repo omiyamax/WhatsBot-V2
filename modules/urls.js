@@ -48,7 +48,7 @@ ezio.addCommand(
   },
   async (message, client) => {
     const caption = "🎟 : *You can scan it with their whatsApp camera to jing this group.*\n\n" + ezio.config.exif.cap;
-    const wImageUrl = "./workgroupqr.jpg";
+    const wImageUrl = "https://i.ibb.co/5LHzxZV/workgroupqr.jpg";
     const tImageUrl = './testgroupqr.jpg';
     const wImage = { image: { url: wImageUrl }, caption, };
     const tImage = { image: { url: tImageUrl }, caption, };
