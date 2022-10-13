@@ -36,16 +36,16 @@ ezio.addCommand(
           : video = videos.videos[Math.floor(Math.random() * videos.videos.length)]
         let caption = `
 —————————————————————————
-♻ Title : ${video.title}
-♻ Ext : Search [${message.client.command=='song'?'first':"random"} song]
-♻ ID : ${video.videoId}
-♻ Duration : ${video.timestamp}
-♻ Viewes : ${video.views}
-♻ Uploaded On : ${video.ago}
-♻ Author : ${video.author.name}
-♻ Channel : ${video.author.url}
-♻ Description : ${video.description}
-♻ Url : ${video.url}
+📝 Title : ${video.title}
+🧾 Ext : Search [${message.client.command=='song'?'first':"random"} song]
+🏷️ ID : ${video.videoId}
+📓 Duration : ${video.timestamp}
+📜 Viewes : ${video.views}
+📑 Uploaded On : ${video.ago}
+🧾 Author : ${video.author.name}
+📖 Channel : ${video.author.url}
+📒 Description : ${video.description}
+🪄 Url : ${video.url}
 —————————————————————————
 ${ezio.config.exif.cap}
 _________________________`;
@@ -93,16 +93,16 @@ ezio.addCommand(
           : video = videos.videos[Math.floor(Math.random() * videos.videos.length)]
         let caption = `
 —————————————————————————
-♻ Title : ${video.title}
-♻ Ext : Search [${message.client.command == "video"| 'yt-video' ? "first" : "random"} song]
-♻ ID : ${video.videoId}
-♻ Duration : ${video.timestamp}
-♻ Viewes : ${video.views}
-♻ Uploaded On : ${video.ago}
-♻ Author : ${video.author.name}
-♻ Channel : ${video.author.url}
-♻ Description : ${video.description}
-♻ Url : ${video.url}
+📝 Title : ${video.title}
+🧾 Ext : Search [${message.client.command == "video"| 'yt-video' ? "first" : "random"} song]
+🏷️ ID : ${video.videoId}
+📓 Duration : ${video.timestamp}
+📜 Viewes : ${video.views}
+📑 Uploaded On : ${video.ago}
+🧾 Author : ${video.author.name}
+📖 Channel : ${video.author.url}
+📙 Description : ${video.description}
+🪄 Url : ${video.url}
 —————————————————————————
 ${ezio.config.exif.cap}
 _________________________`;
