@@ -32,7 +32,7 @@ function addCommand(info, func) {
     fromMe: info["fromMe"] === undefined ? true : info["fromMe"],
     onlyGroup: info["onlyGroup"] === undefined ? false : info["onlyGroup"],
     onlyPinned: info["onlyPinned"] === undefined ? false : info["onlyPinned"],
-    sucReact: info["sucReact"] === undefined ? "✅" : info["sucReact"],
+    sucReact: info["sucReact"] === undefined ? "👸" : info["sucReact"],
     onlyPm: info["onlyPm"] === undefined ? false : info["onlyPm"],
     deleteCommand: info["deleteCommand"] === undefined ? true : info["deleteCommand"],
     desc: info["desc"] === undefined ? "" : info["desc"],
