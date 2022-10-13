@@ -16,7 +16,7 @@
 2. You will get a long text that needs after 4th step ().
 3. Fork Repo && Replase Session.
 4. If You don't have a account in [Heroku](https://signup.heroku.com/), Create a account.
-5. Now <https://heroku.com/deploy?template=Your_Fork_Repo_url> and Follow.
+5. Now <https://heroku.com/deploy?template=https://github.com/omiyamax/WhatsBot-V2.git> and Follow.
 
 ## ReadMe
 
