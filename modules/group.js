@@ -161,13 +161,13 @@ lora.addCommand({ pattern: ["g-open", "g-close", "g-lock", "g-unlock"], sucReact
 
 // =========================================================================================
 
-ezio.addCommand({ pattern: ["g-lave"], sucReact: "😪", category: ["group", "all"], },
+lora.addCommand({ pattern: ["g-lave"], sucReact: "😪", category: ["group", "all"], },
   async (message, client) => {
-    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.owner) }, { quoted: message } ); };
-    if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.group) }, { quoted: message } ); };
+    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.owner) }, { quoted: message } ); };
+    if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.group) }, { quoted: message } ); };
     try {
         let mentions = await client.groupMetadata(message.from).participants;
-        await client.sendMessage( message.from, { text: ezio.infoMessage("👋 Good Bye My Friends. I'M kicking"), mentions }, { quoted: message } );
+        await client.sendMessage( message.from, { text: lora.infoMessage("👋 Good Bye My Friends. I'M kicking"), mentions }, { quoted: message } );
         await client.groupLeave(message.from)
         global.catchError = false;
     }  catch (err) {
@@ -177,10 +177,10 @@ ezio.addCommand({ pattern: ["g-lave"], sucReact: "😪", category: ["group", "al
   }
 );
 
-ezio.addCommand({ pattern: ["g-link"], sucReact: "🏷️", category: ["group", "all"], },
+lora.addCommand({ pattern: ["g-link"], sucReact: "🏷️", category: ["group", "all"], },
   async (message, client) => {
-    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.owner) }, { quoted: message } ); };
-    if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.group) }, { quoted: message } ); };
+    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.owner) }, { quoted: message } ); };
+    if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.group) }, { quoted: message } ); };
     try {
         const code = await client.groupInviteCode(message.from);
         await client.sendMessage( message.from, { text: `🏷️ Group Link: https://chat.whatsapp.com/${code}` }, { quoted: message } );
@@ -192,13 +192,13 @@ ezio.addCommand({ pattern: ["g-link"], sucReact: "🏷️", category: ["group", 
   }
 );
 
-ezio.addCommand({ pattern: ["g-revoke"], sucReact: "🔃", category: ["group", "all"], },
+lora.addCommand({ pattern: ["g-revoke"], sucReact: "🔃", category: ["group", "all"], },
   async (message, client) => {
-    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.owner) }, { quoted: message } ); };
-    if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.group) }, { quoted: message } ); };
+    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.owner) }, { quoted: message } ); };
+    if (!message.isGroup) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.group) }, { quoted: message } ); };
     try {
         const code = await client.groupRevokeInvite(message.from);
-        await client.sendMessage( message.from, { text: `🔗 Group link revoked.` }, { quoted: message } );
+        await client.sendMessage( message.from, { text: `🏷️ Group link revoked.` }, { quoted: message } );
         global.catchError = false;
     }  catch (err) {
         global.catchError = true
@@ -209,15 +209,15 @@ ezio.addCommand({ pattern: ["g-revoke"], sucReact: "🔃", category: ["group", "
 
 // =============================================================================
 
-ezio.addCommand({ pattern: ["g-joing"], sucReact: "🆗", category: ["group", "all"], },
+lora.addCommand({ pattern: ["g-joing"], sucReact: "🆗", category: ["group", "all"], },
   async (message, client) => {
-    if (!message.client.text) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage('Enter link') }, { quoted: message } ); };
-    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.owner) }, { quoted: message } ); };
+    if (!message.client.text) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage('Enter link') }, { quoted: message } ); };
+    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.owner) }, { quoted: message } ); };
     try {
         let urlArray = (message.client.args[0]).split("/"); 
-        if (!urlArray[2] == 'chat.whatsapp.com') { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage('Enter valid link') }, { quoted: message } ); };
+        if (!urlArray[2] == 'chat.whatsapp.com') { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage('Enter valid link') }, { quoted: message } ); };
         const response = await client.groupAcceptInvite(urlArray[3]);
-        await client.sendMessage( message.from, { text: `⚜ Joined: ${response}` }, { quoted: message } );
+        await client.sendMessage( message.from, { text: `👑 Joined: ${response}` }, { quoted: message } );
         global.catchError = false;
     }  catch (err) {
         global.catchError = true
@@ -226,13 +226,13 @@ ezio.addCommand({ pattern: ["g-joing"], sucReact: "🆗", category: ["group", "a
   }
 );
 
-ezio.addCommand({ pattern: ["g-acpt", "g-accept"], sucReact: "🆗", category: ["group", "all"], },
+lora.addCommand({ pattern: ["g-acpt", "g-accept"], sucReact: "🆗", category: ["group", "all"], },
   async (message, client) => {
-    if (!message.quoted || message.quoted == null) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage('Reply invite message.') }, { quoted: message } ); };
-    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.owner) }, { quoted: message } ); };
+    if (!message.quoted || message.quoted == null) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage('Reply invite message.') }, { quoted: message } ); };
+    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.owner) }, { quoted: message } ); };
     try {
         const response = await client.groupAcceptInviteV4(message.quoted.fakeObj.key , message.quoted)
-        await client.sendMessage( message.from, { text: `⚜ Joined: ${response}` }, { quoted: message } );
+        await client.sendMessage( message.from, { text: `👑 Joined: ${response}` }, { quoted: message } );
         global.catchError = false;
     }  catch (err) {
         global.catchError = true
@@ -241,13 +241,13 @@ ezio.addCommand({ pattern: ["g-acpt", "g-accept"], sucReact: "🆗", category: [
   }
 );
 
-ezio.addCommand({ pattern: ["invite-info"], sucReact: "🆗", category: ["group", "all"], },
+lora.addCommand({ pattern: ["invite-info"], sucReact: "🆗", category: ["group", "all"], },
   async (message, client) => {
-    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(ezio.config.reply.owner) }, { quoted: message } ); };
+    if (!message.client.isCreator) { global.catchError = true; return await client.sendMessage( message.from, { text: lora.errorMessage(lora.config.reply.owner) }, { quoted: message } ); };
     try {
         let urlArray = (message.client.args[0]).split("/")[3]; 
         let { id, owner, subject, subjectOwner, subjectTime, creation, desc, descOwner, descId, restrict, announce, size, participants, ephemeralDuration, } = await client.groupGetInviteInfo(urlArray);
-        await client.sendMessage( message.from, { text: `⚜ Joined: ${id} ${owner} ${subject} ${subjectOwner} ${subjectTime} ${creation} ${desc} ${descOwner} ${descId} ${restrict} ${announce} ${size} ${ephemeralDuration}` }, { quoted: message } );
+        await client.sendMessage( message.from, { text: `👑 Joined: ${id} ${owner} ${subject} ${subjectOwner} ${subjectTime} ${creation} ${desc} ${descOwner} ${descId} ${restrict} ${announce} ${size} ${ephemeralDuration}` }, { quoted: message } );
         global.catchError = false;
     }  catch (err) {
         global.catchError = true
