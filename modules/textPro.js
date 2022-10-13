@@ -22,7 +22,7 @@ let T_W = "Can use two words"
 // ################## Test ######################
 // ##############################################
 
-ezio.addCommand( { pattern: ["tp-blackpink"], sucReact: "🖼", category: ['logo'], usage: '<word>', }, async (message, client) => {
+ezio.addCommand( { pattern: ["tp-blackpink"], sucReact: "🪄", category: ['logo'], usage: '<word>', }, async (message, client) => {
   if (!message.client.args[0]) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(N_T) }, { quoted: message } ); };
   if (message.client.text.length >= 12) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(T_L) }, { quoted: message } ); };
   await maker.textpro('https://textpro.me/create-blackpink-logo-style-online-1001.html', [message.client.text])
@@ -30,7 +30,7 @@ ezio.addCommand( { pattern: ["tp-blackpink"], sucReact: "🖼", category: ['logo
   .catch( async (err) => { global.catchError = true; return await client.sendErrorMessage( message.from, err, message.key, message ); });
 });
 
-ezio.addCommand( { pattern: ["tp-cutpaper"], sucReact: "🖼", category: ['logo'], usage: '<word>', }, async (message, client) => {
+ezio.addCommand( { pattern: ["tp-cutpaper"], sucReact: "🪄", category: ['logo'], usage: '<word>', }, async (message, client) => {
   if (!message.client.args[0]) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(N_T) }, { quoted: message } ); };
   if (message.client.text.length >= 30) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(T_L) }, { quoted: message } ); };
   await maker.textpro('https://textpro.me/create-art-paper-cut-text-effect-online-1022.html', [message.client.text])
@@ -42,7 +42,7 @@ ezio.addCommand( { pattern: ["tp-cutpaper"], sucReact: "🖼", category: ['logo'
 // ############### Graffiti Style ###############
 // ##############################################
 
-ezio.addCommand( { pattern: ["tp-graffiti1"], sucReact: "🖼", category: ['logo'], usage: '<word>', }, async (message, client) => {
+ezio.addCommand( { pattern: ["tp-graffiti1"], sucReact: "🪄", category: ['logo'], usage: '<word>', }, async (message, client) => {
   if (!message.client.args[0]) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(N_T) }, { quoted: message } ); };
   if (message.client.text.length >= 15) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(T_L) }, { quoted: message } ); };
   await maker.textpro('https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html', [message.client.text])
@@ -50,7 +50,7 @@ ezio.addCommand( { pattern: ["tp-graffiti1"], sucReact: "🖼", category: ['logo
   .catch( async (err) => { global.catchError = true; return await client.sendErrorMessage( message.from, err, message.key, message ); });
 });
 
-ezio.addCommand( { pattern: ["tp-graffiti2"], sucReact: "🖼", category: ['logo'], usage: '<word>', }, async (message, client) => {
+ezio.addCommand( { pattern: ["tp-graffiti2"], sucReact: "📸", category: ['logo'], usage: '<word>', }, async (message, client) => {
   if (!message.client.args[0]) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(N_T) }, { quoted: message } ); };
   if (message.client.text.length >= 15) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(T_L) }, { quoted: message } ); };
   await maker.textpro('https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html', [message.client.text, 'Ai Dark Ezio'])
@@ -58,7 +58,7 @@ ezio.addCommand( { pattern: ["tp-graffiti2"], sucReact: "🖼", category: ['logo
   .catch( async (err) => { global.catchError = true; return await client.sendErrorMessage( message.from, err, message.key, message ); });
 });
 
-ezio.addCommand( { pattern: ["tp-graffiti3"], sucReact: "🖼", category: ['logo'], usage: '<word1/word2>', }, async (message, client) => {
+ezio.addCommand( { pattern: ["tp-graffiti3"], sucReact: "👩‍💻", category: ['logo'], usage: '<word1/word2>', }, async (message, client) => {
   if (!message.client.args[0]) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(N_T) }, { quoted: message } ); };
   let arry = message.client.text.split("/");
   if (arry.length > 2) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(T_W) }, { quoted: message } ); };
@@ -76,7 +76,7 @@ ezio.addCommand( { pattern: ["tp-graffiti3"], sucReact: "🖼", category: ['logo
 ezio.config.api.textpro.takes1.map(logo => {
   const { pattern, textLenth, id } = logo; 
   const url = ezio.config.api.textpro.domain + id;
-  ezio.addCommand( { pattern, sucReact: "🖼", category: ['logo'], usage: '<word>', }, async (message, client) => {
+  ezio.addCommand( { pattern, sucReact: "❤️", category: ['logo'], usage: '<word>', }, async (message, client) => {
     if (!message.client.args[0]) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(N_T) }, { quoted: message } ); };
     if (message.client.text.length >= textLenth) { global.catchError = true; return await client.sendMessage( message.from, { text: ezio.errorMessage(T_L) }, { quoted: message } ); };
     await maker.textpro( url, [message.client.text])
