@@ -32,16 +32,16 @@ ezio.addCommand(
 
 ⚜ Name: Omindu Anjane (Black Alpha).
 ⚜ Number: Wa.me/94760510568
-⚜ Company: Subadra Bro
+⚜ Team: Team Queen Lora
 ⚜ Web Site: https://ominduanjane.github.io/
-⚜ Youtube: https://www.youtube.com/channel/UCeDeaDD8dpdMT2gO3VHY1JQ
+⚜ Youtube: https://www.youtube.com/channel/slomindutech
 ⚜ GitHub: https://www.github.com/ominduanjane
 ⚜ FaceBook: https://fb.com/poshitha.subadra (Poshitha Subadra)
 ⚜ Instagram: https://instagram.com/subadraposhitha (Poshitha Subadra)
 
 ----------------------------
 
-💌 Plz Subscribe Me On  Youtube.
+🔸 Plz Follow Me On  Github.
 
 ----------------------------
 `;
@@ -55,7 +55,7 @@ ezio.addCommand(
         "canonical-url": "https://ominduanjane.github.io/",
         "matched-text": "https://ominduanjane.github.io/",
         title: "Omindu Anjana",
-        description: "This is a WhatsApp user bot. \n\nAlive",
+        description: "This is a Queen Lora Md WhatsApp user bot. \n\nAlive",
         jpegThumbnail: ezio.config.image.encd.D_E_ADEC,
       },
     };
