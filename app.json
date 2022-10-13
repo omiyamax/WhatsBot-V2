@@ -1,7 +1,7 @@
 {
-  "name": "WhatsBot_V2",
+  "name": "Queen Lora Md",
   "description": "whatsapp md bot build with nodejs",
-  "repository": "https://github.com/AiDarkEzio/WhatsBot-V2.git",
+  "repository": "https://github.com/omiyamax/WhatsBot-V2.git",
   "logo": "https://raw.githubusercontent.com/AiDarkEzio/Whats-Bot/master/GojoMedia/D_E-DPC.jpg",
   "keywords": [ "nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"
   ],
