@@ -21,8 +21,8 @@ ezio.addCommand(
   async (message, client) => {
     const caption = `------- WhatsApp Groups -------
 
-⚜ Work Group :- https://chat.whatsapp.com/KLd7DIw1OV56wj4BRw0oE9
-⚜ Test Group :- https://chat.whatsapp.com/DhtO4ibqk7gBZEPLNof0TQ
+👩‍💻 Work Group :- https://chat.whatsapp.com/FJeNMSYdoF50gZ0rhwvtlx
+🔓 Test Group :- https://chat.whatsapp.com/Hn7zZIRBRUYHTu279a6USf
 
 --------------------------------`;
     const buttons = [
@@ -48,8 +48,8 @@ ezio.addCommand(
   },
   async (message, client) => {
     const caption = "🎟 : *You can scan it with their whatsApp camera to jing this group.*\n\n" + ezio.config.exif.cap;
-    const wImageUrl = "https://raw.githubusercontent.com/AiDarkEzio/Whats-Bot-MD_V2/main/database/image/Work_Group_Qr.jpeg";
-    const tImageUrl = 'https://raw.githubusercontent.com/AiDarkEzio/Whats-Bot-MD_V2/main/database/image/Work_Group_Qr.jpeg';
+    const wImageUrl = "./workgroupqr.jpg";
+    const tImageUrl = './testgroupqr.jpg';
     const wImage = { image: { url: wImageUrl }, caption, };
     const tImage = { image: { url: tImageUrl }, caption, };
     if (message.client.command == 'group-qr-work') await client.sendMessage( message.from, wImage, { quoted: message })
