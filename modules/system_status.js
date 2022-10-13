@@ -53,9 +53,9 @@ ezio.addCommand(
  └───────────────┈ ⳹`;
 
       const buttons = [
-        { buttonId: ".extra_urls", buttonText: { displayText: "🔗 Extra Urls 🔗" }, type: 1, },
-        { buttonId: ".creater", buttonText: { displayText: "👨🏼‍💻 Creater & Owner 👨🏼‍💻" }, type: 1, },
-        { buttonId: ".menu", buttonText: { displayText: "🔖 All Menu 🔖" }, type: 1, },
+        { buttonId: ".extra_urls", buttonText: { displayText: "⫷ Extra Urls ⫸" }, type: 1, },
+        { buttonId: ".creater", buttonText: { displayText: "⫷👨🏼‍💻 Creater & Owner 👨🏼‍💻⫸" }, type: 1, },
+        { buttonId: ".menu", buttonText: { displayText: "⫷ All Menu ⫸" }, type: 1, },
       ]
 
       // const template_Buttons = [
