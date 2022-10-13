@@ -21,7 +21,7 @@ ezio.addCommand(
     sucReact: "🎟",
   },
   async (message, client) => {
-    const caption = `------- WhatsApp Groups ------- https://aidarkezio.github.io`;
+    const caption = `------- WhatsApp Groups ------- https://ominduanjane.github.io`;
     const Message = {
       linkPreview: {
         "canonical-url": "https://aidarkezio.github.io",
@@ -37,7 +37,7 @@ ezio.addCommand(
       contextInfo: {
         externalAdReply: {
           title: 'global.botname}',
-          body: ` Gojo-Satoru`,
+          body: ` Queen-lora`,
           previewType: "PHOTO",
           thumbnailUrl: ``,
           thumbnail: ezio.config.image.encd.D_E_TMB,
