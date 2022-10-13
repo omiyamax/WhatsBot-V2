@@ -31,7 +31,7 @@ ezio.addCommand({ pattern: ["menu", 'help'], desc: Lang.DESCC, sucReact: "📃",
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
       if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *🎀 :-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
-    CMD_HELP += "│\n│ 💓 Created By 𝚀𝚄𝙴𝙴𝙽 𝚕𝚘𝚛𝚊-𝙼𝙳\n└─────────◼";
+    CMD_HELP += "│\n│ 👑 Created By 𝚀𝚄𝙴𝙴𝙽 𝚕𝚘𝚛𝚊-𝙼𝙳\n└─────────◼";
     await client.sendMessage( message.from,{ image: { url: ezio.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
@@ -60,7 +60,7 @@ ezio.categories.map(category => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
       if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *🎀 :-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
-    CMD_HELP += "│\n│ 💓 Created By 𝚀𝚄𝙴𝙴𝙽 𝙻𝙾𝚁𝙰 𝙼𝙳\n└─────────◼";
+    CMD_HELP += "│\n│ 👑 Created By 𝚀𝚄𝙴𝙴𝙽 𝙻𝙾𝚁𝙰 𝙼𝙳\n└─────────◼";
     await client.sendMessage( message.from,{ image: { url: ezio.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
@@ -103,21 +103,21 @@ ezio.addCommand({ pattern: [`cmds-count`], sucReact: "🇱🇰", category: ["all
     });
     let text = `------- Command Count -------
 
-⚜ All Commands: ${all_cmd.toString()}
-⚜ Visible Commands: ${visible_cmd.toString()}
-⚜ Invisible Commands: ${invisible_cmd.toString()}
-⚜ Search Commands: ${system_cmd.toString()}
-⚜ Downloade Commands: ${downloade_cmd.toString()}
-⚜ Chat Commands: ${chat_cmd.toString()}
-⚜ System Commands: ${system_cmd.toString()}
-⚜ Fun Commands: ${fun_cmd.toString()}
-⚜ Adult Commands: ${eighteenplus_cmd.toString()}
-⚜ Owner Commands: ${owner_cmd.toString()}
-⚜ Create Commands: ${create_cmd.toString()}
-⚜ Group Commands: ${group_cmd.toString()}
-⚜ Logo Commands: ${logo_cmd.toString()}
+📖 All Commands: ${all_cmd.toString()}
+📑 Visible Commands: ${visible_cmd.toString()}
+📃 Invisible Commands: ${invisible_cmd.toString()}
+📜 Search Commands: ${system_cmd.toString()}
+📄 Downloade Commands: ${downloade_cmd.toString()}
+🧾 Chat Commands: ${chat_cmd.toString()}
+📝 System Commands: ${system_cmd.toString()}
+📓 Fun Commands: ${fun_cmd.toString()}
+📒 Adult Commands: ${eighteenplus_cmd.toString()}
+📘 Owner Commands: ${owner_cmd.toString()}
+📙 Create Commands: ${create_cmd.toString()}
+📕 Group Commands: ${group_cmd.toString()}
+📸 Logo Commands: ${logo_cmd.toString()}
 
-💢 Count Of All Commands: ${countcmdOfCmd.toString()}
+📚 Count Of All Commands: ${countcmdOfCmd.toString()}
 `;
     const buttons = [
       { buttonId: ".extra_urls", buttonText: { displayText: "🔗 Extra Urls 🔗" }, type: 1, },
