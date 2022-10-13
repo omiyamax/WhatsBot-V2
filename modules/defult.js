@@ -10,18 +10,18 @@
 => Whats Bot - Dark_Ezio.
 // ════════════════════════════ */
 
-const ezio = require("../events");
+const lora = require("../events");
 
-ezio.addCommand(
+lora.addCommand(
   {
     pattern: ["donate", 'report'],
     dontAddCommandList: true,
-    sucReact: "👩‍💻",
+    sucReact: "🧰",
   },
   async (message, client) => {
     await client.sendMessage(
       message.from,
-      { text: ezio.errorMessage('404 :' + ezio.config.reply.notFound) },
+      { text: lora.errorMessage('404 :' + lora.config.reply.notFound) },
       { quoted: message }
     );
     global.catchError = true;
