@@ -24,9 +24,9 @@ ezio.addCommand(
     const caption = `------- WhatsApp Groups ------- https://ominduanjane.github.io`;
     const Message = {
       linkPreview: {
-        "canonical-url": "https://aidarkezio.github.io",
-        "matched-text": "https://aidarkezio.github.io",
-        title: "Subhadra Poshi",
+        "canonical-url": "https://ominduanjane.github.io",
+        "matched-text": "https://ominduanjana.github.io",
+        title: "Omindu Anjana",
         description: "This is a WhatsApp user bot \n\nSend this number: Alive",
         jpegThumbnail: ezio.config.image.encd.D_E_ADEC,
       },
