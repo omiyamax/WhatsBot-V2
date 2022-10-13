@@ -13,25 +13,25 @@
 const ezio = require("../events");
 const Lang = ezio.getString("_whats");
 // const fs = require("fs");
-// const path = require("path");
+// const path = require("path")
 let cTitle = { "search": "Search",  "all": 'All', "downloade": "Downloade", "chat": "Chat", "system": "System", 'fun': "Fun", '18+': "18+", 'owner': "Owner", 'create': "Create", 'group': "Group", "logo": "Logo", }
 
-ezio.addCommand({ pattern: ["menu", 'help'], desc: Lang.DESCC, sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
+ezio.addCommand({ pattern: ["menu", 'help'], desc: Lang.DESCC, sucReact: "📃", category: ["all", "system"] }, async (message, client) => {
   try {
     let prefix = new String; 
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
-◉═════════════◉
-  💎 Whats-Bot Commands 💎
-◉═════════════◉
-┌─(⚜ All Commands)
+◻━━━━━━━━━━━━━━━━◻ 
+  🇱🇰 𝚀𝚄𝙴𝙴𝙽 𝙻𝙾𝚁𝙰 𝙼𝙳 Commands 🇱🇰
+◼━━━━━━━━━━━━━━━━◼
+┌─(◼ All Commands)
 │
 `;
     ezio.commands.map((command) => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
       if (command.category.includes('all')) { command.pattern.map((cmd) => CMD_HELP += "│ *🎀 :-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
-    CMD_HELP += "│\n│ 💓 Created By Whats_Bot-MD\n└─────────◉";
+    CMD_HELP += "│\n│ 💓 Created By 𝚀𝚄𝙴𝙴𝙽 𝚕𝚘𝚛𝚊-𝙼𝙳\n└─────────◼";
     await client.sendMessage( message.from,{ image: { url: ezio.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
@@ -43,14 +43,16 @@ ezio.addCommand({ pattern: ["menu", 'help'], desc: Lang.DESCC, sucReact: "📰",
 
 ezio.categories.map(category => {
   if (category == 'all') return;
-  ezio.addCommand({ pattern: [`${category}-menu`], sucReact: "📰", category: ["all", "system"] }, async (message, client) => {
+  ezio.addCommand({ pattern: [`${category}-menu`], sucReact: "📃", category: ["all", "system"] }, async (message, client) => {
   try {
     let prefix = new String; 
     if (!message.client.prefix || !message.client.prefix.length == 1) prefix = '.';
     let CMD_HELP = `
-◉═════════════◉
-  💎 Whats-Bot Commands 💎
-◉═════════════◉
+◻━━━━━━━━━━━━━━━━◻ 
+
+  🇱🇰 𝚀𝚄𝙴𝙴𝙽 𝙻𝙾𝚁𝙰 𝙼𝙳 Commands 🇱🇰
+
+◼━━━━━━━━━━━━━━━━◼
 ┌─(⚜ ${cTitle[category]} Commands)
 │
 `;
@@ -58,7 +60,7 @@ ezio.categories.map(category => {
       if (command.dontAddCommandList || command.pattern === undefined || command.pattern === null) return;
       if (command.category.includes(category)) { command.pattern.map((cmd) => CMD_HELP += "│ *🎀 :-* ```" + prefix + cmd + ' ' + command.usage + "```\n")}
     }); 
-    CMD_HELP += "│\n│ 💓 Created By Whats_Bot-MD\n└─────────◉";
+    CMD_HELP += "│\n│ 💓 Created By 𝚀𝚄𝙴𝙴𝙽 𝙻𝙾𝚁𝙰 𝙼𝙳\n└─────────◼";
     await client.sendMessage( message.from,{ image: { url: ezio.config.image.url.D_E_DP_ }, caption: CMD_HELP, }, { quoted: message });
     global.catchError = false;
   } catch (error) { global.catchError = true; return await client.sendErrorMessage( message.from, error, message.key, message);}
@@ -66,7 +68,7 @@ ezio.categories.map(category => {
 })
 
 
-ezio.addCommand({ pattern: [`cmds-count`], sucReact: "🆗", category: ["all", "system"] }, async (message, client) => {
+ezio.addCommand({ pattern: [`cmds-count`], sucReact: "🇱🇰", category: ["all", "system"] }, async (message, client) => {
   try {
     await client.sendMessage( message.from, { text: ezio.infoMessage('Counting commands 💯') }, { quoted: ezio.config.quoted.product });
     let all_cmd = 0;
