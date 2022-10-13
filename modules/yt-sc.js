@@ -11,10 +11,10 @@
 // ════════════════════════════ */
 
 const yts = require("yt-search");
-const ezio = require("../events");
-const lang = ezio.getString("scrapers");
+const lora = require("../events");
+const lang = lora.getString("scrapers");
 
-ezio.addCommand(
+lora.addCommand(
   { 
     pattern: ["play", "ytplay"], 
     desc: "you can dowloade audio from youtube", 
@@ -60,7 +60,7 @@ ezio.addCommand(
   🧾 Description : ${result.description}
   🛡️ Url : ${result.url}
   —————————————————————————`,
-        footer: ezio.config.exif.footer,
+        footer: lora.config.exif.footer,
         buttons: buttons,
       };
 
@@ -69,7 +69,7 @@ ezio.addCommand(
   }
 );
 
-ezio.addCommand(
+lora.addCommand(
   { 
     pattern: ["rplay", "rytplay"], 
     desc: "you can dowloade Randomly yt result downlode", 
@@ -102,7 +102,7 @@ ezio.addCommand(
   🧾 Description : ${result.description}
   🛡️ Url : ${result.url}
   —————————————————————————`,
-        footer: ezio.config.exif.footer,
+        footer: lora.config.exif.footer,
         buttons: buttons,
       };
       await client.sendMessage(message.from, buttonMessage, { quoted: message, });
