@@ -18,7 +18,7 @@ ezio.addCommand(
   {
     pattern: ["img"],
     usage: '<text>',
-    sucReact: "🖼",
+    sucReact: "📸",
     category: ["search", "all"],
   },
   async (message, client) => {
